@@ -1,0 +1,177 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --main-font: 'Inter', sans-serif;
+    --button-font: 'IBM Plex Mono', monospace;
+    --header-title: #FFFFFF;
+    --aside-title: #F8FBFF;
+    --placeholder-color: #02C171;
+    --textarea-text-color: #02C171;
+    --social-media-color: invert(1);
+
+    --button-encrypt-background-color: #02C171;
+    --button-encrypt-border-color: #000000;
+    --button-encrypt-font-color: #00000; 
+    
+    --button-descrypt-background-color: #C31D27;
+    --button-descrypt-font-color: #FFFFFF;
+    
+    --button-toggle-background-color: #050E0C;
+    --body-background-color: #0F0F0F;
+    --menu-background-color: #050E0C;
+    --border-theme-light: #02C171;
+    --box-background-color: #050E0C;
+    --box-shadow: 0px 0px 5px rgba(2, 193, 113, 0.5);
+    --image-shadow: linear-gradient(180deg, rgba(5, 14, 12, 0) 27.36%, #050E0C 100%);
+    --dropdown-hover: #02C171;
+    --dropdown-text-color-hover: #FFFFFF;
+    --warning-text-color: #EDEDED;
+    
+    --button-encrypt-background-color-hover: #00FF87;
+    --button-descrypy-background-color-hover: #c2323a;
+
+    --aside-display-border-color-hover: #00FF87;
+    --button-copy-background-color-hover: #00FF87;
+    --scroolbar-track-color: #004233;
+
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--body-background-color);
+    padding: 2.2rem 5% 1rem;
+    font-family: var(--main-font);
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--header-title);
+}
+
+main {
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos das Sections */
+.section__response, .section__result {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.response__textarea {
+    border-radius: 1rem;
+    border: 0.2rem solid var(--border-theme-light);
+    border-style: dashed;
+    padding: 1.6rem;
+    flex-basis: 37rem;
+}
+
+.main__textarea, .result__mensage {
+    resize: none;
+    width: 100%;
+    height: 95%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--textarea-text-color);
+    background-color: var(--box-background-color);
+    padding-right: 1rem;
+}
+
+.main__textarea::placeholder {
+    color: var(--placeholder-color);
+}
+
+.wrapper-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 3.2rem;
+}
+
+.is-button-large {
+    border-radius: 1rem;
+    padding: 1.8rem 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+    flex: 1;
+
+    box-shadow: var(--box-shadow);
+    font-family: var(--button-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.is-encrypt, .is-button-copy {
+    background-color: var(--button-encrypt-background-color);
+    border: 0.1rem solid var(--button-encrypt-border-color);
+    color: var(--button-encrypt-font-color);
+}
+
+.is-encrypt:hover {
+    background-color: var(--button-encrypt-background-color-hover);
+}
+
+.is-descrypt {
+    background-color: var(--button-descrypt-background-color);
+    border: 0.1rem solid var(--button-encrypt-border-color);
+    color: var(--button-descrypt-font-color);
+}
+
+.is-descrypt:hover {
+    background-color: var(--button-descrypy-background-color-hover);
+}
+
+.section__result:hover {
+    border-color: var(--aside-display-border-color-hover);
+}
+
+.result__mensage {
+    border-radius: 1rem;
+    border: 0.2rem solid var(--border-theme-light);
+    padding: 1.6rem;
+    flex-basis: 37rem;
+}
+
+.is-button-copy:hover {
+    background-color: var(--button-copy-background-color-hover);
+}
+
+.main__textarea::-webkit-scrollbar,
+.result__mensage::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.main__textarea::-webkit-scrollbar-track,
+.result__mensage::-webkit-scrollbar-track {
+    background: var(--scroolbar-track-color);
+    border-radius: 0.5rem;
+}
+
+.main__textarea::-webkit-scrollbar-thumb,
+.result__mensage::-webkit-scrollbar-thumb {
+    background: var(--border-theme-light);
+    border-radius: 0.5rem;
+    border: 3px solid var(--scroolbar-track-color)
+ 
+}
+

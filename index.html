@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Codefier</title>
+</head>
+<body>
+    <header>
+        <h1 class="header__title">Codefier</h1>
+    </header>
+    <main>
+        <section class="section__response">
+            <div class="response__textarea">
+                <textarea class="main__textarea js-textarea" placeholder="Digite o seu texto!"></textarea>
+            </div>
+            <div class="wrapper-button">
+                <button class="is-button-large is-encrypt js-encrypt" type="button">
+                    Criptografar
+                </button>
+                <button class="is-button-large is-descrypt js-descrypt" type="button">
+                    Descriptografar
+                </button>
+            </div>
+        </section>
+        <section class="section__result">
+            <div class="result__mensage js-display-text"></div>
+            <div class="wrapper-button">
+                <button class="is-button-large is-button-copy js-btn-copy" type="button">
+                    Copiar
+                </button>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
