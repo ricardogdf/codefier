@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MatrixCanvas from "./Components/MatrixCanvas";
 import { customEncode, customDecode } from "./utils/encoder";
-import "./App.css";
+import "./styles/App.css";
 import { Terminal } from "./Components/Terminal";
 
 function App() {
@@ -47,26 +47,21 @@ function App() {
         }}
       >
         <div className="terminal-box">
-          <label>&gt; Código:</label>
-          <Terminal />
-          <div style={{ display: "flex", gap: "8px" }}>
-            <button className="decode-button" onClick={handleDecode}>
-              Codificar
-            </button>
-            <button className="decode-button" onClick={handleDecode}>
-              Decodificar
-            </button>
-          </div>
+          <label>&gt; Code:</label>
+          <Terminal input={input} handleInputChange={handleInputChange} />
         </div>
 
         <div className="terminal-box">
-          <label>&gt; Resultado:</label>
-          <textarea className="terminal-output" value={output} readOnly />
-          <button className="decode-button" onClick={handleDecode}>
-            Copiar
-          </button>
+          <label>&gt; Result:</label>
+          <Terminal copy readOnly />
         </div>
       </div>
+      <button className="decode-button" onClick={handleDecode}>
+        Codificar
+      </button>
+      <button className="decode-button" onClick={handleDecode}>
+        Decodificar
+      </button>
     </div>
   );
 }
