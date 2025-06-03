@@ -1,36 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 
-export function Terminal({
-  copy = false,
-  readOnly,
-  output,
-  input,
-  handleInputChange,
-}) {
-  const [terminalStep, setTerminalStep] = useState(0);
+export function Terminal({ copy = false, readOnly, value, handleValueChange }) {
   const [copied, setCopied] = useState(false);
-  const terminalSteps = [
-    "git clone https://github.com/nextjs/saas-starter",
-    "pnpm install",
-    "pnpm db:setup",
-    "pnpm db:migrate",
-    "pnpm db:seed",
-    "pnpm dev 🎉",
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTerminalStep((prev) =>
-        prev < terminalSteps.length - 1 ? prev + 1 : prev
-      );
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [terminalStep]);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(terminalSteps.join("\n"));
+    navigator.clipboard.writeText(value);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -61,8 +36,8 @@ export function Terminal({
         <div className="flex gap-2">
           <span className="text-green-400">$</span>
           <textarea
-            value={input || output}
-            onChange={handleInputChange}
+            value={value}
+            onChange={handleValueChange}
             readOnly={readOnly}
           />
         </div>

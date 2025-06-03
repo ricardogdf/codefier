@@ -20,7 +20,7 @@ textarea {
   outline: none;
 }
 
-.decode-button {
+.encode-button {
   padding: 0.5rem 1rem;
   background: #000;
   color: #00ff9f;
@@ -30,7 +30,22 @@ textarea {
   cursor: pointer;
 }
 
-.decode-button:hover {
+.encode-button:hover {
   background: #00ff9f;
+  color: #000;
+}
+
+.decode-button {
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #ff5555;
+  border: 1px solid #ff5555;
+  font-family: "Courier New", monospace;
+  box-shadow: 0 0 5px #ff5555;
+  cursor: pointer;
+}
+
+.decode-button:hover {
+  background: #ff5555;
   color: #000;
 }
