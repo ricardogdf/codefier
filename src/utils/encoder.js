@@ -1,5 +1,11 @@
-const data = new Date();
-const timestamp = data.getTime();
+const data = new Date(); // Replace with your date
+const timestamp =
+  data.getDay() -
+  15 +
+  data.getMonth() * 12 -
+  9 +
+  data.getFullYear() * 365 -
+  2024;
 
 export function customEncode(text) {
   const shifted = text.split("").map((c) => c.charCodeAt(0) + timestamp);
